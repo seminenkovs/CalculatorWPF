@@ -21,6 +21,13 @@ namespace CalculatorWPF
             InitializeComponent();
 
             resultLabel.Content = "14321";
+
+            acBtn.Click += AcBtn_Click;
+        }
+
+        private void AcBtn_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = "0";
         }
 
         private void SevenBtn_OnClick(object sender, RoutedEventArgs e)

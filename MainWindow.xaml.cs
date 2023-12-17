@@ -16,6 +16,9 @@ namespace CalculatorWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private double lastNumber;
+        private double result;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -23,6 +26,16 @@ namespace CalculatorWPF
             resultLabel.Content = "14321";
 
             acBtn.Click += AcBtn_Click;
+            negativeBtn.Click += NegativeBtn_Click;
+        }
+
+        private void NegativeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber * -1;
+                resultLabel.Content = lastNumber.ToString();
+            }
         }
 
         private void AcBtn_Click(object sender, RoutedEventArgs e)

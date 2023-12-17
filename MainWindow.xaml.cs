@@ -22,11 +22,19 @@ namespace CalculatorWPF
         public MainWindow()
         {
             InitializeComponent();
-
-            resultLabel.Content = "14321";
-
+            
             acBtn.Click += AcBtn_Click;
             negativeBtn.Click += NegativeBtn_Click;
+            percentageBtn.Click += PercentageBtn_Click;
+        }
+
+        private void PercentageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber / 100;
+                resultLabel.Content = lastNumber.ToString();
+            }
         }
 
         private void NegativeBtn_Click(object sender, RoutedEventArgs e)

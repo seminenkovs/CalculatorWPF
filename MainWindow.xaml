@@ -48,7 +48,7 @@
                 Grid.Row="1"
                 Grid.Column="3"/>
         <Button x:Name="sevenBtn"
-                Click="SevenBtn_OnClick"
+                Click="NumberBtn_OnClick"
                 Content="7"
                 Margin="5"
                 Grid.Row="2"

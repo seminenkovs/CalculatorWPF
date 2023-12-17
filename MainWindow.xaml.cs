@@ -57,7 +57,7 @@ namespace CalculatorWPF
             resultLabel.Content = "0";
         }
 
-        private void SevenBtn_OnClick(object sender, RoutedEventArgs e)
+        private void NumberBtn_OnClick(object sender, RoutedEventArgs e)
         {
             if (resultLabel.Content.ToString() == "0")
             {

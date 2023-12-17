@@ -26,6 +26,12 @@ namespace CalculatorWPF
             acBtn.Click += AcBtn_Click;
             negativeBtn.Click += NegativeBtn_Click;
             percentageBtn.Click += PercentageBtn_Click;
+            equalBtn.Click += EqualBtn_Click;
+        }
+
+        private void EqualBtn_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
 
         private void PercentageBtn_Click(object sender, RoutedEventArgs e)

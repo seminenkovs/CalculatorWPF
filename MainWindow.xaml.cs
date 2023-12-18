@@ -121,7 +121,14 @@ namespace CalculatorWPF
 
         private void DotBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (resultLabel.Content.ToString().Contains("."))
+            {
+                // Do nothing
+            }
+            else
+            {
+                resultLabel.Content = $"{resultLabel.Content}.";
+            }
         }
     }
 

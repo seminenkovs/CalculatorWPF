@@ -59,54 +59,16 @@ namespace CalculatorWPF
 
         private void OperationButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                resultLabel.Content = "0";
+            }
         }
 
         private void NumberBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            int selectedValue = 0;
-
-            if (sender == zeroBtn)
-            {
-                selectedValue = 0;
-            }
-            if (sender == oneBtn)
-            {
-                selectedValue = 1;
-            }
-            if (sender == twoBtn)
-            {
-                selectedValue = 2;
-            }
-            if (sender == threeBtn)
-            {
-                selectedValue = 3;
-            }
-            if (sender == fourBtn)
-            {
-                selectedValue = 4;
-            }
-            if (sender == fiveBtn)
-            {
-                selectedValue = 5;
-            }
-            if (sender == sixBtn)
-            {
-                selectedValue = 6;
-            }
-            if (sender == sevenBtn)
-            {
-                selectedValue = 7;
-            }
-            if (sender == eightBtn)
-            {
-                selectedValue = 8;
-            }
-            if (sender == nineBtn)
-            {
-                selectedValue = 9;
-            }
-
+            int selectedValue = int.Parse((sender as Button).Content.ToString());
+            
 
             if (resultLabel.Content.ToString() == "0")
             {

@@ -39,15 +39,21 @@ namespace CalculatorWPF
                 switch (selectedOperator)
                 {
                     case SelectedOperator.Addition:
+                        result = SimpleMath.Add(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Division:
+                        result = SimpleMath.Divide(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Multiplication:
+                        result = SimpleMath.Multiply(lastNumber, newNumber);
                         break;
                     case SelectedOperator.Substraction:
+                        result = SimpleMath.Substract(lastNumber, newNumber);
                         break;
                 }
             }
+
+            resultLabel.Content = result.ToString();
         }
 
         private void PercentageBtn_Click(object sender, RoutedEventArgs e)
@@ -124,10 +130,10 @@ namespace CalculatorWPF
 
     public class SimpleMath
     {
-        public double Add(double n1, double n2) => n1 + n2;
-        public double Substract(double n1, double n2) => n1 - n2;
-        public double Multiply(double n1, double n2) => n1 * n2;
-        public double Divide(double n1, double n2) => n1 / n2;
+        public static double Add(double n1, double n2) => n1 + n2;
+        public static double Substract(double n1, double n2) => n1 - n2;
+        public static double Multiply(double n1, double n2) => n1 * n2;
+        public static double Divide(double n1, double n2) => n1 / n2;
 
     }
 }

@@ -80,4 +80,12 @@ namespace CalculatorWPF
             }
         }
     }
+
+    public enum SelectedOperator
+    {
+        Addition,
+        Substraction,
+        Multiplication,
+        Division
+    }
 }

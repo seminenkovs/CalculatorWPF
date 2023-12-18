@@ -58,10 +58,15 @@ namespace CalculatorWPF
 
         private void PercentageBtn_Click(object sender, RoutedEventArgs e)
         {
+            double tempNumber = default;
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
-                lastNumber = lastNumber / 100;
-                resultLabel.Content = lastNumber.ToString();
+                tempNumber = (tempNumber / 100);
+                if (lastNumber != 0)
+                {
+                    tempNumber *= lastNumber;
+                }
+                resultLabel.Content = tempNumber.ToString();
             }
         }
 

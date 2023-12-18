@@ -32,7 +32,22 @@ namespace CalculatorWPF
 
         private void EqualBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            double newNumber;
+
+            if (double.TryParse(resultLabel.Content.ToString(), out newNumber))
+            {
+                switch (selectedOperator)
+                {
+                    case SelectedOperator.Addition:
+                        break;
+                    case SelectedOperator.Division:
+                        break;
+                    case SelectedOperator.Multiplication:
+                        break;
+                    case SelectedOperator.Substraction:
+                        break;
+                }
+            }
         }
 
         private void PercentageBtn_Click(object sender, RoutedEventArgs e)

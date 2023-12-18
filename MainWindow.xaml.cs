@@ -118,6 +118,11 @@ namespace CalculatorWPF
                 resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
             }
         }
+
+        private void DotBtn_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     public enum SelectedOperator

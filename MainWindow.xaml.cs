@@ -16,8 +16,8 @@ namespace CalculatorWPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double lastNumber;
-        private double result;
+        private double lastNumber = default;
+        private double result = default;
         private SelectedOperator selectedOperator;
 
         public MainWindow()
@@ -121,13 +121,13 @@ namespace CalculatorWPF
 
         private void DotBtn_OnClick(object sender, RoutedEventArgs e)
         {
-            if (resultLabel.Content.ToString().Contains("."))
+            if (resultLabel.Content.ToString().Contains(","))
             {
                 // Do nothing
             }
             else
             {
-                resultLabel.Content = $"{resultLabel.Content}.";
+                resultLabel.Content = $"{resultLabel.Content},";
             }
         }
     }

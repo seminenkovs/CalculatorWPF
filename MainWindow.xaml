@@ -128,7 +128,7 @@
                 Grid.ColumnSpan="2"/>
         <Button x:Name="dotBtn" 
                 Click="DotBtn_OnClick"
-                Content="."
+                Content=","
                 Margin="5"
                 Grid.Row="5"
                 Grid.Column="2"/>

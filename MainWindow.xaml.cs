@@ -18,6 +18,7 @@ namespace CalculatorWPF
     {
         private double lastNumber;
         private double result;
+        private SelectedOperator selectedOperator;
 
         public MainWindow()
         {
@@ -62,6 +63,23 @@ namespace CalculatorWPF
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
                 resultLabel.Content = "0";
+            }
+
+            if (sender == multiplicationBtn)
+            {
+                selectedOperator = SelectedOperator.Multiplication;
+            }
+            if (sender == divisionBtn)
+            {
+                selectedOperator = SelectedOperator.Division;
+            }
+            if (sender == additionBtn)
+            {
+                selectedOperator = SelectedOperator.Addition;
+            }
+            if (sender == subtractionBtn)
+            {
+                selectedOperator = SelectedOperator.Substraction;
             }
         }
 
